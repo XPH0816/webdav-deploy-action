@@ -20,6 +20,6 @@ else
   if [[ "$(declare -p $INPUT_EXCLUDE)" =~ "declare -a" ]]; then
     rclone -v sync --exclude "'$INPUT_EXCLUDE[*]'" woocart:$INPUT_REMOTE
   else
-    rclone -v sync --exclude $INPUT_EXCLUDE $INPUT_LOCAL woocart:$INPUT_REMOTE
+    rclone -v sync $INPUT_LOCAL woocart:$INPUT_REMOTE --exclude "$INPUT_EXCLUDE"
   fi 
 fi
