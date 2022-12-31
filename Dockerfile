@@ -1,7 +1,7 @@
 FROM alpine:3.11
 
-LABEL "com.github.actions.name"="WooCart Deploy"
-LABEL "com.github.actions.description"="Deploy changes from your GitHUb repository to your store."
+LABEL "com.github.actions.name"="WebDAV Deploy"
+LABEL "com.github.actions.description"="Deploy changes from your GitHUb repository using WebDAV."
 LABEL "com.github.actions.icon"="upload-cloud"
 LABEL "com.github.actions.color"="blue"
 LABEL "maintainer"="Niteo.co <info@niteo.co>"
