@@ -51,5 +51,6 @@ jobs:
         password: ${{ secrets.WEBDAV_PASSWORD }}
         local: "./"
         remote: "remote_directory/"
+        exclude: "./.git*"
 ```
 3. Create `WEBDAV_URL`, `WEBDAV_USERNAME`, `WEBDAV_PASSWORD` secret using [GitHub Action's Secret](https://developer.github.com/actions/creating-workflows/storing-secrets). You can find these values in WooCart > Settings tab for your store.
