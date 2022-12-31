@@ -16,6 +16,9 @@ inputs:
   remote:
     description: 'Remote directory'
     required: true
+  exclude:
+    description: 'Excluded directory'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
