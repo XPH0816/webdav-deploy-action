@@ -1,4 +1,4 @@
-name: 'WooCart Deploy'
+name: 'WebDAV Deploy'
 description: 'Deploy changes from your GitHUb repository to your store.'
 inputs:
   url:
