@@ -1,4 +1,4 @@
-# WooCart Deploy Action
+# WebDAV Deploy Action
 
 Sync your GitHub repository with your store on WooCart.com.
 
@@ -24,6 +24,8 @@ Sync your GitHub repository with your store on WooCart.com.
 
 **Required** Path on remote to sync into.
 
+### `exclude`
+
 ## Example usage
 
 1. Create a `.github/workflows/deploy.yml` file in your GitHub repo, if one doesn't exist already.
@@ -39,14 +41,15 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Deploy my-plugin to WooCart
-      uses: woocart/deploy-action@v5
+    - name: 🚗 Get Latest Code
+      uses: actions/checkout@v2
+    - name: 🤳 Deploy website
+      uses: xph0816/webdav-deploy-action
       with:
         url: ${{ secrets.WEBDAV_URL }}
         username: ${{ secrets.WEBDAV_USERNAME }}
         password: ${{ secrets.WEBDAV_PASSWORD }}
-        local: "dist/"
-        remote: "plugins/my-woocart-plugin"
+        local: "./"
+        remote: "remote_directory/"
 ```
 3. Create `WEBDAV_URL`, `WEBDAV_USERNAME`, `WEBDAV_PASSWORD` secret using [GitHub Action's Secret](https://developer.github.com/actions/creating-workflows/storing-secrets). You can find these values in WooCart > Settings tab for your store.
