@@ -13,11 +13,10 @@ vendor = other
 
 if [ -z ${INPUT_EXCLUDE+x} ]; then 
   rclone sync $INPUT_LOCAL woocart:$INPUT_REMOTE --exclude-from=/rclone-filters.txt
-
 else 
   if [[ "$(declare -p $INPUT_EXCLUDE)" =~ "declare -a" ]]; then
-    rclone sync --exclude "'$INPUT_EXCLUDE[*]'" woocart:$INPUT_REMOTE
+    rclone sync woocart:$INPUT_REMOTE --exclude "'$INPUT_EXCLUDE[*]'"
   else
-    rclone sync --exclude $INPUT_EXCLUDE $INPUT_LOCAL woocart:$INPUT_REMOTE
+    rclone sync $INPUT_LOCAL woocart:$INPUT_REMOTE --exclude $INPUT_EXCLUDE
   fi 
 fi
