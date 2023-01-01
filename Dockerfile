@@ -16,9 +16,6 @@ RUN apk --no-cache add ca-certificates davfs2 tini rsync bash
 
 COPY *.sh /usr/local/bin/
 
-# Following should match the WEBDRIVE_MOUNT environment variable.
-VOLUME [ "~/mnt/webdrive" ]
-
 COPY entrypoint.sh /entrypoint.sh
 
 # ENTRYPOINT ["/entrypoint.sh"]
