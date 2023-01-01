@@ -5,7 +5,6 @@ mkdir -p ~/mnt/webdrive
 
 DEST=${WEBDRIVE_MOUNT:-/mnt/webdrive}
 
-<<<<<<< HEAD
 # Check variables and defaults
 if [ -z "${INPUT_URL}" ]; then
     echo "No URL specified!"
@@ -62,14 +61,4 @@ if [ -n "$(ls -1A $DEST)" ]; then
     exec "$@"
 else
     echo "Nothing found in $DEST, giving up!"
-=======
-if [ -z ${INPUT_EXCLUDE+x} ]; then 
-  rclone -v sync $INPUT_LOCAL woocart:$INPUT_REMOTE 
-else 
-  if [[ "$(declare -p $INPUT_EXCLUDE)" =~ "declare -a" ]]; then
-    rclone -v sync --exclude "'$INPUT_EXCLUDE[*]'" woocart:$INPUT_REMOTE
-  else
-    rclone -v sync --exclude $INPUT_EXCLUDE $INPUT_LOCAL woocart:$INPUT_REMOTE
-  fi 
->>>>>>> parent of 3204814 (Update entrypoint.sh)
 fi
