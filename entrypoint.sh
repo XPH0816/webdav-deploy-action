@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # Where are we going to mount the remote webdav resource in our container.
 
-mkdir -p ~/mnt/webdrive
-
 DEST=${WEBDRIVE_MOUNT:-/mnt/webdrive}
 
 # Check variables and defaults
