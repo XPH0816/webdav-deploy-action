@@ -12,4 +12,6 @@ RUN apk add --no-cache bash curl unzip ca-certificates fuse openssh-client jq \
 
 COPY entrypoint.sh /entrypoint.sh
 
+COPY rclone.filter.txt ~/rclone.filter.txt
+
 ENTRYPOINT ["/entrypoint.sh"]
