@@ -12,7 +12,7 @@ vendor = other
 " > ~/.config/rclone/rclone.conf
 
 if [ -z ${INPUT_EXCLUDE+x} ]; then 
-  rclone -arv sync $INPUT_LOCAL woocart:$INPUT_REMOTE --exclude-from=~/rclone-filters.txt
+  rclone -arv sync $INPUT_LOCAL woocart:$INPUT_REMOTE --exclude-from=/rclone-filters.txt
 
 else 
   if [[ "$(declare -p $INPUT_EXCLUDE)" =~ "declare -a" ]]; then
