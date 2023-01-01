@@ -12,7 +12,7 @@ ENV OWNER=0
 # Location of directory where to mount the drive into the container.
 ENV WEBDRIVE_MOUNT=/mnt/webdrive
 
-RUN apk --no-cache add ca-certificates davfs2 tini
+RUN apk --no-cache add ca-certificates davfs2 tini rsync
 
 COPY *.sh /usr/local/bin/
 
