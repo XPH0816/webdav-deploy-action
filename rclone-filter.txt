@@ -1,5 +1,7 @@
-.git/
-.github/
-.gitignore
-*/.gitignore
-*/.github/
+- .git/
+- .git/**
+- .git/**/**
+- .github/**
+- .gitignore
+- */.gitignore
+- */.github/
