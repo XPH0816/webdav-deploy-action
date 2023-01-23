@@ -11,12 +11,4 @@ user = $INPUT_USERNAME
 vendor = other
 " > ~/.config/rclone/rclone.conf
 
-if [ -z ${INPUT_EXCLUDE+x} ]; then 
-  rclone -v sync $INPUT_LOCAL woocart:$INPUT_REMOTE --exclude-from=/rclone-filters.txt
-else 
-  if [[ "$(declare -p $INPUT_EXCLUDE)" =~ "declare -a" ]]; then
-    rclone -v sync $INPUT_LOCAL woocart:$INPUT_REMOTE --exclude "'$INPUT_EXCLUDE[*]'"
-  else
-    rclone -v sync $INPUT_LOCAL woocart:$INPUT_REMOTE --exclude $INPUT_EXCLUDE
-  fi 
-fi
+rclone -v sync $INPUT_LOCAL woocart:$INPUT_REMOTE --filter-from=/rclone-filters.txt
