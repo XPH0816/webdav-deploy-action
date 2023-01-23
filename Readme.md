@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 🚗 Get Latest Code
-      uses: actions/checkout@v0.1
+      uses: actions/checkout@v0.2
     - name: 🤳 Deploy website
       uses: xph0816/webdav-deploy-action
       with:
