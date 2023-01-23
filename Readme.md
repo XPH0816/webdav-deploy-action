@@ -54,53 +54,5 @@ jobs:
         local: "./"
         remote: "remote_directory/"
 ```
-or
-```yaml
-name: Deploy my-plugin
-on:
-  push:
-    branches:
-    - master
-jobs:
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - name: 🚗 Get Latest Code
-      uses: actions/checkout@v0.1
-    - name: 🤳 Deploy website
-      uses: xph0816/webdav-deploy-action
-      with:
-        url: ${{ secrets.WEBDAV_URL }}
-        username: ${{ secrets.WEBDAV_USERNAME }}
-        password: ${{ secrets.WEBDAV_PASSWORD }}
-        local: "./"
-        remote: "remote_directory/"
-        exclude: ".git/"
-```
-or
-```yaml
-name: Deploy my-plugin
-on:
-  push:
-    branches:
-    - master
-jobs:
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - name: 🚗 Get Latest Code
-      uses: actions/checkout@v0.1
-    - name: 🤳 Deploy website
-      uses: xph0816/webdav-deploy-action
-      with:
-        url: ${{ secrets.WEBDAV_URL }}
-        username: ${{ secrets.WEBDAV_USERNAME }}
-        password: ${{ secrets.WEBDAV_PASSWORD }}
-        local: "./"
-        remote: "remote_directory/"
-        exclude: '(".git/" ".github/")'
-```
 
 3. Create `WEBDAV_URL`, `WEBDAV_USERNAME`, `WEBDAV_PASSWORD` secret using [GitHub Action's Secret](https://developer.github.com/actions/creating-workflows/storing-secrets). You can find these values in WooCart > Settings tab for your store.
