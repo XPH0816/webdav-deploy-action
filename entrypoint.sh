@@ -11,4 +11,4 @@ user = $INPUT_USERNAME
 vendor = other
 " > ~/.config/rclone/rclone.conf
 
-rclone -v sync $INPUT_LOCAL woocart:$INPUT_REMOTE --filter-from=/rclone-filters.txt
+rclone -v sync $INPUT_LOCAL woocart:$INPUT_REMOTE --filter-from=/rclone-filter.txt
