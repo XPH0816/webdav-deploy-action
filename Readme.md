@@ -24,10 +24,6 @@ Sync your GitHub repository with your store on WooCart.com.
 
 **Required** Path on remote to sync into.
 
-### `exclude`
-
-Path to exclude from sync. (Automatically exclude .git/ and .github/)
-
 ## Example usage
 
 1. Create a `.github/workflows/deploy.yml` file in your GitHub repo, if one doesn't exist already.
