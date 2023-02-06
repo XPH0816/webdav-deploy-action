@@ -44,9 +44,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 🚗 Get Latest Code
-      uses: actions/checkout@v0.3
+      uses: actions/checkout@v0.2
     - name: 🤳 Deploy website
-      uses: xph0816/webdav-deploy-action
+      uses: XPH0816/webdav-deploy-action@v0.3
       with:
         url: ${{ secrets.WEBDAV_URL }}
         username: ${{ secrets.WEBDAV_USERNAME }}
@@ -69,9 +69,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 🚗 Get Latest Code
-      uses: actions/checkout@v0.3
+      uses: actions/checkout@v0.2
     - name: 🤳 Deploy website
-      uses: xph0816/webdav-deploy-action
+      uses: XPH0816/webdav-deploy-action@v0.3
       with:
         url: ${{ secrets.WEBDAV_URL }}
         username: ${{ secrets.WEBDAV_USERNAME }}
