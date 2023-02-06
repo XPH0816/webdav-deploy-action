@@ -16,6 +16,10 @@ inputs:
   remote:
     description: 'Remote directory'
     required: true
+  method:
+    description: 'Method to use'
+    required: false
+    default: 'sync'
   exclude:
     description: 'Excluded directory'
     required: false
