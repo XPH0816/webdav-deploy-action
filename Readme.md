@@ -1,6 +1,6 @@
 # WebDAV Deploy Action
 
-Sync your GitHub repository with your store on WooCart.com.
+Sync your GitHub repository with your store on WooCart.com. / Any WebDAV Support Platform
 
 ## Inputs
 
@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 🚗 Get Latest Code
-      uses: actions/checkout@v0.2
+      uses: actions/checkout@v0.3
     - name: 🤳 Deploy website
       uses: XPH0816/webdav-deploy-action@v0.3
       with:
@@ -69,7 +69,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 🚗 Get Latest Code
-      uses: actions/checkout@v0.2
+      uses: actions/checkout@v0.3
     - name: 🤳 Deploy website
       uses: XPH0816/webdav-deploy-action@v0.3
       with:
@@ -81,4 +81,4 @@ jobs:
         method: "copy"
 ```
 
-3. Create `WEBDAV_URL`, `WEBDAV_USERNAME`, `WEBDAV_PASSWORD` secret using [GitHub Action's Secret](https://developer.github.com/actions/creating-workflows/storing-secrets). You can find these values in WooCart > Settings tab for your store.
+3. Create `WEBDAV_URL`, `WEBDAV_USERNAME`, `WEBDAV_PASSWORD` secret using [GitHub Action's Secret](https://developer.github.com/actions/creating-workflows/storing-secrets). You can find these values in WooCart > Settings tab for your store or set for your own server.
