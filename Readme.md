@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 🚗 Get Latest Code
-      uses: actions/checkout@v0.3
+      uses: actions/checkout@v3
     - name: 🤳 Deploy website
       uses: XPH0816/webdav-deploy-action@v0.3
       with:
@@ -69,7 +69,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 🚗 Get Latest Code
-      uses: actions/checkout@v0.3
+      uses: actions/checkout@v3
     - name: 🤳 Deploy website
       uses: XPH0816/webdav-deploy-action@v0.3
       with:
